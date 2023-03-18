@@ -7,22 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EBBFC9629BDCAB000587366 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBBFC9529BDCAB000587366 /* CustomSheet.swift */; };
+		1EBBFC9829BE15D300587366 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBBFC9729BE15D300587366 /* Launch Screen.storyboard */; };
+		1EBBFC9A29BE18D900587366 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBBFC9929BE18D900587366 /* SplashScreen.swift */; };
 		1ED94DA229B785DC007828C6 /* CountTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DA129B785DC007828C6 /* CountTodoApp.swift */; };
 		1ED94DA429B785DD007828C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DA329B785DD007828C6 /* ContentView.swift */; };
 		1ED94DA629B785E0007828C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED94DA529B785E0007828C6 /* Assets.xcassets */; };
 		1ED94DA929B785E0007828C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED94DA829B785E0007828C6 /* Preview Assets.xcassets */; };
-		1ED94DAB29B785E0007828C6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DAA29B785E0007828C6 /* Persistence.swift */; };
-		1ED94DAE29B785E0007828C6 /* CountTodo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DAC29B785E0007828C6 /* CountTodo.xcdatamodeld */; };
+		1ED94DB629B788B2007828C6 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DB429B788B2007828C6 /* Todo.xcdatamodeld */; };
+		1ED94DB929B789CF007828C6 /* ImportanceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DB829B789CF007828C6 /* ImportanceButton.swift */; };
+		1ED94DBB29B789DA007828C6 /* SuccessButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DBA29B789DA007828C6 /* SuccessButton.swift */; };
+		1ED94DBD29B78A14007828C6 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DBC29B78A14007828C6 /* TitleComponent.swift */; };
+		1ED94DBF29B78A7B007828C6 /* CircleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DBE29B78A7B007828C6 /* CircleTimer.swift */; };
+		1ED94DC329B78AB3007828C6 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DC229B78AB3007828C6 /* TodoDetailView.swift */; };
+		1ED94DC529B78AF5007828C6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DC429B78AF5007828C6 /* DataController.swift */; };
+		1ED94DC729B85FEF007828C6 /* TimerTextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED94DC629B85FEF007828C6 /* TimerTextComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EBBFC9529BDCAB000587366 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
+		1EBBFC9729BE15D300587366 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		1EBBFC9929BE18D900587366 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		1ED94D9E29B785DC007828C6 /* CountTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED94DA129B785DC007828C6 /* CountTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountTodoApp.swift; sourceTree = "<group>"; };
 		1ED94DA329B785DD007828C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1ED94DA529B785E0007828C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED94DA829B785E0007828C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1ED94DAA29B785E0007828C6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		1ED94DAD29B785E0007828C6 /* CountTodo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountTodo.xcdatamodel; sourceTree = "<group>"; };
+		1ED94DB529B788B2007828C6 /* Todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo.xcdatamodel; sourceTree = "<group>"; };
+		1ED94DB829B789CF007828C6 /* ImportanceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportanceButton.swift; sourceTree = "<group>"; };
+		1ED94DBA29B789DA007828C6 /* SuccessButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessButton.swift; sourceTree = "<group>"; };
+		1ED94DBC29B78A14007828C6 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
+		1ED94DBE29B78A7B007828C6 /* CircleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimer.swift; sourceTree = "<group>"; };
+		1ED94DC229B78AB3007828C6 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		1ED94DC429B78AF5007828C6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1ED94DC629B85FEF007828C6 /* TimerTextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTextComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +73,15 @@
 		1ED94DA029B785DC007828C6 /* CountTodo */ = {
 			isa = PBXGroup;
 			children = (
+				1ED94DB729B789BC007828C6 /* Components */,
 				1ED94DA129B785DC007828C6 /* CountTodoApp.swift */,
 				1ED94DA329B785DD007828C6 /* ContentView.swift */,
+				1ED94DC229B78AB3007828C6 /* TodoDetailView.swift */,
 				1ED94DA529B785E0007828C6 /* Assets.xcassets */,
-				1ED94DAA29B785E0007828C6 /* Persistence.swift */,
-				1ED94DAC29B785E0007828C6 /* CountTodo.xcdatamodeld */,
+				1EBBFC9729BE15D300587366 /* Launch Screen.storyboard */,
 				1ED94DA729B785E0007828C6 /* Preview Content */,
+				1ED94DB429B788B2007828C6 /* Todo.xcdatamodeld */,
+				1ED94DC429B78AF5007828C6 /* DataController.swift */,
 			);
 			path = CountTodo;
 			sourceTree = "<group>";
@@ -71,6 +92,20 @@
 				1ED94DA829B785E0007828C6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1ED94DB729B789BC007828C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1ED94DB829B789CF007828C6 /* ImportanceButton.swift */,
+				1ED94DBA29B789DA007828C6 /* SuccessButton.swift */,
+				1ED94DBC29B78A14007828C6 /* TitleComponent.swift */,
+				1ED94DC629B85FEF007828C6 /* TimerTextComponent.swift */,
+				1ED94DBE29B78A7B007828C6 /* CircleTimer.swift */,
+				1EBBFC9529BDCAB000587366 /* CustomSheet.swift */,
+				1EBBFC9929BE18D900587366 /* SplashScreen.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EBBFC9829BE15D300587366 /* Launch Screen.storyboard in Resources */,
 				1ED94DA929B785E0007828C6 /* Preview Assets.xcassets in Resources */,
 				1ED94DA629B785E0007828C6 /* Assets.xcassets in Resources */,
 			);
@@ -143,10 +179,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED94DAB29B785E0007828C6 /* Persistence.swift in Sources */,
-				1ED94DAE29B785E0007828C6 /* CountTodo.xcdatamodeld in Sources */,
+				1EBBFC9A29BE18D900587366 /* SplashScreen.swift in Sources */,
 				1ED94DA429B785DD007828C6 /* ContentView.swift in Sources */,
+				1ED94DC329B78AB3007828C6 /* TodoDetailView.swift in Sources */,
+				1ED94DB629B788B2007828C6 /* Todo.xcdatamodeld in Sources */,
+				1ED94DBD29B78A14007828C6 /* TitleComponent.swift in Sources */,
 				1ED94DA229B785DC007828C6 /* CountTodoApp.swift in Sources */,
+				1ED94DC729B85FEF007828C6 /* TimerTextComponent.swift in Sources */,
+				1ED94DC529B78AF5007828C6 /* DataController.swift in Sources */,
+				1EBBFC9629BDCAB000587366 /* CustomSheet.swift in Sources */,
+				1ED94DBB29B789DA007828C6 /* SuccessButton.swift in Sources */,
+				1ED94DBF29B78A7B007828C6 /* CircleTimer.swift in Sources */,
+				1ED94DB929B789CF007828C6 /* ImportanceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -259,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -274,27 +318,37 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CountTodo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3V3DJV43RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "카운트투두";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.CountTodo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jade.CountTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,27 +357,37 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CountTodo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3V3DJV43RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "카운트투두";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.CountTodo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jade.CountTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -351,13 +415,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1ED94DAC29B785E0007828C6 /* CountTodo.xcdatamodeld */ = {
+		1ED94DB429B788B2007828C6 /* Todo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1ED94DAD29B785E0007828C6 /* CountTodo.xcdatamodel */,
+				1ED94DB529B788B2007828C6 /* Todo.xcdatamodel */,
 			);
-			currentVersion = 1ED94DAD29B785E0007828C6 /* CountTodo.xcdatamodel */;
-			path = CountTodo.xcdatamodeld;
+			currentVersion = 1ED94DB529B788B2007828C6 /* Todo.xcdatamodel */;
+			path = Todo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

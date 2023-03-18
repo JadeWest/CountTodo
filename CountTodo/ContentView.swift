@@ -9,80 +9,86 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    @StateObject var viewModel = DataController.shared
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State private var showAddTodo = false
+    
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        VStack {
+            NavigationView {
+                List {
+                    ForEach(viewModel.workingEntities, id: \.self) { item in
+                        NavigationLink {
+                            TodoDetailView(viewModel: self.viewModel, showAddTodo: $showAddTodo, entity: item)
+                        } label: {
+                            HStack {
+                                SuccessButton(viewModel: self.viewModel, entity: item)
+                                
+                                VStack(alignment: .leading, spacing: 5) {
+                                    TitleComponent(viewModel: self.viewModel, entity: item)
+                                    TimerTextComponent(viewModel: self.viewModel, entity: item)
+                                        .onReceive(viewModel.milisecondTimer) { _ in
+                                            viewModel.calculateDeadline(id: item.id, deadline: item.deadline, entity: item)
+                                        }
+                                }
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                ImportanceButton(viewModel: self.viewModel, entity: item)
+                                    .onTapGesture {
+                                        withAnimation(.linear) {
+                                            item.importance.toggle()
+                                            viewModel.save()
+                                        }
+                                    }
+                            }
+                        }
                     }
+                    .onDelete(perform: viewModel.deleteEntity)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                .navigationTitle("Todo")
+                .toolbar(content: {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            withAnimation(.easeInOut) {
+                                showAddTodo.toggle()
+                            }
+                        }, label: {
+                            if showAddTodo {
+                                Text("취소")
+                                    .foregroundColor(.blue)
+                            } else {
+                                Text("추가")
+                                    .foregroundColor(.blue)
+                            }
+                        })
                     }
+                })
+                .onAppear {
+                    viewModel.milisecondTimer = Timer.publish(every: 0.1, on: .current, in: .common).autoconnect()
                 }
-            }
-            Text("Select an item")
+            }// NavigationView End
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+        .onAppear()
+        // ZStack End
+        if showAddTodo {
+            CustomSheet(viewModel: viewModel, showAddTodo: $showAddTodo)
+                .frame(height: UIScreen.main.bounds.size.height * 0.3)
+                .edgesIgnoringSafeArea([.bottom])
+                .transition(.move(edge: .bottom))
+                .animation(.easeInOut, value: showAddTodo)
+                .onAppear {
+                    viewModel.milisecondTimer.upstream.connect().cancel()
+                }
+                .onDisappear {
+                    viewModel.milisecondTimer = Timer.publish(every: 0.1, on: .current, in: .common).autoconnect()
+                }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }

@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct CountTodoApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = DataController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            SplashScreen()
+                .background(Color(uiColor: .secondarySystemFill))
         }
-    }
+    } 
 }
